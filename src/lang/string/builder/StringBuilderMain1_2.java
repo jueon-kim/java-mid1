@@ -1,25 +1,15 @@
 package lang.string.builder;
 
-public class StringBuilderMain1_1 {
+public class StringBuilderMain1_2 {
     public static void main(String[] args) {
         StringBuilder sb = new StringBuilder();
-        sb.append("A");
-        sb.append("B");
-        sb.append("C");
-        sb.append("D");
-        System.out.println("sb = " + sb);
 
-        sb.insert(4, "java");
-        System.out.println("insert = " + sb);
+        String string = sb.append("A").append("B").append("C").append("D")
+                .insert(4, "java")
+                .delete(4, 8)
+                        .reverse()
+                                .toString();
 
-        sb.delete(4, 8);
-        System.out.println("delete = " + sb);
-
-        sb.reverse();
-        System.out.println("reverse = " + sb);
-
-        //StringBuilder -> String
-        String string = sb.toString();
         System.out.println("String = " + string);
     }
 
